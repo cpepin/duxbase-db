@@ -1,0 +1,19 @@
+{
+  "name": "squad-leader-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrations": "knex migrate:latest",
+    "seeds": "knex seed:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bcrypt": "^3.0.6",
+    "dotenv": "^8.0.0",
+    "knex": "^0.19.1",
+    "pg": "^7.12.1"
+  }
+}
