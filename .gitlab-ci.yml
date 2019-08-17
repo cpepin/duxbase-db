@@ -10,7 +10,8 @@ install_dependencies_job:
     - npm install
 
 deploy_migrations:
-  stage: deploy
+  stage: deploy_migrations
+  when: manual
   script:
     - npm run migrations
 
