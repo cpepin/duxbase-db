@@ -1,13 +1,21 @@
 image: "node:latest"
 
 stages:
+  - install_dependencies
   - deploy_migrations
+
+cache:
+  paths:
+    -node_modules/
+
+install_dependencies:
+  stage: install_dependencies
+  script:
+    - npm install
 
 deploy_migrations:
   stage: deploy_migrations
   when: manual
-  before_script:
-    - npm install
   script:
     - npm run migrations
 
