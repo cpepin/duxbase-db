@@ -7,7 +7,7 @@ exports.seed = async function(knex) {
   // For now, insert a single user
   await knex('user').insert(
     {
-      email: 'admin@squadleader.com',
+      email: 'test@squadleader.com',
       password
     },
   );
