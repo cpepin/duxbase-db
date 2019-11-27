@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-node@v1
         env:
           DB_URL: ${{ secrets.DB_URL }}
+          NODE_ENV: production
         with:
           node-version: ${{ matrix.node-version }}
       - name: install knex and publish migrations
