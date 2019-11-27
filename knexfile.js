@@ -1,16 +1,23 @@
-require('dotenv').config();
+require("dotenv").config();
 
 const { DB_URL } = process.env;
 
 module.exports = {
   development: {
-    client: 'postgres',
+    client: "postgres",
     connection: DB_URL,
     seeds: {
-      directory: './src/seeds/dev'
+      directory: "./src/seeds/dev"
     },
     migrations: {
-      directory: './src/migrations'
+      directory: "./src/migrations"
+    }
+  },
+  production: {
+    client: "postgres",
+    connection: DB_URL,
+    migrations: {
+      directory: "./src/migrations"
     }
   }
 };
