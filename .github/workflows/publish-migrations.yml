@@ -20,6 +20,4 @@ jobs:
         env:
           DB_URL: ${{ secrets.DB_URL }}
           NODE_ENV: production
-        run: |
-          npm ci
-          npm run migrations
+        run: npm ci && npm run migrations
